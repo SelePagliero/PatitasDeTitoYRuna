@@ -4,80 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto | Patitas de Tito y Runa</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Nunito:wght@400;700&display=swap">
+    <link rel="stylesheet" href="../styles/styles.css">
 </head>
-<body>
-    <header>
+<body class="pagina">
+    <header class="encabezado">
         <a href="../index.html">
-            <img src="../img/PugyBulldog.png" alt="Logo de Patitas de Tito y Runa: un pug y una bulldog sentados juntos">
+            <img class="logo" src="../img/PugyBulldog.png" alt="Logo de Patitas de Tito y Runa: un pug y una bulldog sentados juntos">
         </a>
-        <p>Patitas de Tito y Runa</p>
+        <p class="marca">Patitas de Tito y Runa</p>
         <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="nosotros.html">Sobre nosotros</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+            <ul class="menu-lista">
+                <li><a class="menu-enlace" href="../index.html">Inicio</a></li>
+                <li><a class="menu-enlace" href="nosotros.html">Sobre nosotros</a></li>
+                <li><a class="menu-enlace" href="productos.html">Productos</a></li>
+                <li><a class="menu-enlace" href="servicios.html">Servicios</a></li>
+                <li><a class="menu-enlace" href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section>
-            <h1>Contacto</h1>
+    <main class="contenido">
+        <section class="seccion">
+            <h1 class="titulo-principal">Contacto</h1>
             <p>¿Tenés una consulta o querés reservar un turno? Visitanos, llamanos o escribinos.</p>
-            <figure>
-                <img src="../img/PugyBulldog.png" alt="Afiche de Patitas de Tito y Runa con un pug y una bulldog, la dirección Belgrano 742 y el teléfono (0341) 555-0192">
-                <figcaption>Te esperamos en Belgrano 742.</figcaption>
+            <figure class="figura">
+                <img class="imagen" src="../img/PugyBulldog.png" alt="Afiche de Patitas de Tito y Runa con un pug y una bulldog, la dirección Belgrano 742 y el teléfono (0341) 555-0192">
+                <figcaption class="epigrafe">Te esperamos en Belgrano 742.</figcaption>
             </figure>
         </section>
 
-        <section>
-            <h2>Dónde encontrarnos</h2>
-            <article>
-                <h3>Nuestro local</h3>
+        <section class="seccion">
+            <h2 class="titulo-seccion">Dónde encontrarnos</h2>
+            <article class="tarjeta">
+                <h3 class="titulo-articulo">Nuestro local</h3>
                 <p>Belgrano 742. Teléfono: (0341) 555-0192.</p>
             </article>
         </section>
 
-        <section>
-            <h2>Horarios de atención</h2>
-            <ul>
+        <section class="seccion">
+            <h2 class="titulo-seccion">Horarios de atención</h2>
+            <ul class="lista">
                 <li>Lunes a viernes: 9:00 a 13:00 y 16:00 a 20:00</li>
                 <li>Sábados: 9:00 a 13:00</li>
                 <li>Domingos y feriados: cerrado</li>
             </ul>
         </section>
 
-        <section>
-            <h2>Escribinos</h2>
+        <section class="seccion">
+            <h2 class="titulo-seccion">Escribinos</h2>
             <form action="#" method="post">
                 <p>
-                    <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" name="nombre" required>
+                    <label class="etiqueta" for="nombre">Nombre</label>
+                    <input class="campo" type="text" id="nombre" name="nombre" required>
                 </p>
                 <p>
-                    <label for="email">Correo electrónico</label>
-                    <input type="email" id="email" name="email" required>
+                    <label class="etiqueta" for="email">Correo electrónico</label>
+                    <input class="campo" type="email" id="email" name="email" required>
                 </p>
                 <p>
-                    <label for="mensaje">Mensaje</label>
-                    <textarea id="mensaje" name="mensaje" required></textarea>
+                    <label class="etiqueta" for="mensaje">Mensaje</label>
+                    <textarea class="campo" id="mensaje" name="mensaje" required></textarea>
                 </p>
                 <p>
-                    <input type="submit" value="Enviar">
+                    <input class="boton" type="submit" value="Enviar">
                 </p>
             </form>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Patitas de Tito y Runa. Todos los derechos reservados.</p>
+    <footer class="pie">
+        <p class="pie-texto">&copy; 2026 Patitas de Tito y Runa. Todos los derechos reservados.</p>
         <nav>
-            <ul>
-                <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
-                <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
-                <li><a href="https://wa.me/5493415550192" target="_blank">WhatsApp</a></li>
+            <ul class="redes-lista">
+                <li><a class="redes-enlace" href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+                <li><a class="redes-enlace" href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+                <li><a class="redes-enlace" href="https://wa.me/5493415550192" target="_blank">WhatsApp</a></li>
             </ul>
         </nav>
     </footer>
