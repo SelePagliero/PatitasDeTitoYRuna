@@ -199,3 +199,78 @@
     color: #F2C14E;
     font-weight: 700;
 }
+
+/* ---------- Grilla de tarjetas ---------- */
+.destacados {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "titulo"
+        "cachorros"
+        "camas"
+        "collares";
+    gap: 16px;
+}
+
+.categorias {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "titulo"
+        "alimentos"
+        "accesorios"
+        "juguetes"
+        "higiene";
+    gap: 16px;
+}
+
+.destacados .titulo-seccion,
+.categorias .titulo-seccion {
+    grid-area: titulo;
+}
+
+.tarjeta-cachorros {
+    grid-area: cachorros;
+}
+
+.tarjeta-camas {
+    grid-area: camas;
+}
+
+.tarjeta-collares {
+    grid-area: collares;
+}
+
+.tarjeta-alimentos {
+    grid-area: alimentos;
+}
+
+.tarjeta-accesorios {
+    grid-area: accesorios;
+}
+
+.tarjeta-juguetes {
+    grid-area: juguetes;
+}
+
+.tarjeta-higiene {
+    grid-area: higiene;
+}
+
+/* ---------- Media query: pantallas grandes ---------- */
+@media (min-width: 1024px) {
+    .destacados {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "titulo titulo titulo"
+            "cachorros camas collares";
+    }
+
+    .categorias {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "titulo titulo"
+            "alimentos accesorios"
+            "juguetes higiene";
+    }
+}
