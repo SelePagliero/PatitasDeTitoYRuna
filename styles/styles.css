@@ -5,6 +5,17 @@
     box-sizing: border-box;
 }
 
+/* Anula los márgenes que Bootstrap les pone a estas etiquetas */
+p,
+h1,
+h2,
+h3,
+ul,
+figure {
+    margin: 0;
+    padding: 0;
+}
+
 /* ---------- Base ---------- */
 .pagina {
     background-color: #FFF4E3;
@@ -15,13 +26,8 @@
     line-height: 1.6;
 }
 
-/* ---------- Encabezado (navbar) ---------- */
+/* ---------- Encabezado (navbar de Bootstrap) ---------- */
 .encabezado {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
     padding: 20px;
     background-color: #3B2A20;
 }
@@ -34,7 +40,13 @@
     font-family: 'Fredoka', sans-serif;
     font-size: 1.75rem;
     font-weight: 700;
-    text-decoration: none;
+    white-space: normal;
+    flex: 1;
+}
+
+.marca:hover,
+.marca:focus {
+    color: #F2C14E;
 }
 
 .logo {
@@ -42,23 +54,26 @@
     border-radius: 50%;
 }
 
+.boton-menu {
+    border: 2px solid #F2C14E;
+}
+
+/* Rayitas del botón hamburguesa en amarillo */
+.boton-menu .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23F2C14E' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.encabezado .navbar-collapse {
+    flex-grow: 0;
+}
+
 /* ---------- Menú de navegación ---------- */
-.menu-lista {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 24px;
-    list-style: none;
-}
-
 .menu-enlace {
+    padding: 8px 12px;
     color: #F2C14E;
+    font-family: 'Nunito', sans-serif;
     font-weight: 700;
-    text-decoration: none;
-}
-
-.menu-enlace:hover {
-    text-decoration: underline;
+    border-radius: 0.5rem;
 }
 
 /* ---------- Contenido principal ---------- */
@@ -200,6 +215,171 @@
     font-weight: 700;
 }
 
+/* ---------- Galería (carousel de Bootstrap) ---------- */
+.carrusel {
+    border: 4px solid #F2C14E;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.carrusel-imagen {
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    background-color: #FFF4E3;
+}
+
+.carrusel-control {
+    opacity: 0.85;
+}
+
+.carrusel-icono {
+    width: 3rem;
+    height: 3rem;
+    background-color: #A8431F;
+    background-size: 50%;
+    border-radius: 50%;
+}
+
+/* ---------- Modal de Bootstrap ---------- */
+.modal-promo {
+    background-color: #FFF4E3;
+    color: #3B2A20;
+    border: 4px solid #F2C14E;
+    border-radius: 1rem;
+    font-family: 'Nunito', sans-serif;
+}
+
+.modal-promo .modal-header,
+.modal-promo .modal-footer {
+    border-color: #F2C14E;
+}
+
+.titulo-modal {
+    color: #A8431F;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Cruz de cerrar en terracota y anillo de foco con la paleta */
+.modal-promo .btn-close {
+    --bs-btn-close-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23A8431F'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414'/%3e%3c/svg%3e");
+    --bs-btn-close-opacity: 1;
+    --bs-btn-close-hover-opacity: 1;
+    --bs-btn-close-focus-opacity: 1;
+    --bs-btn-close-focus-shadow: 0 0 0 3px #A8431F;
+}
+
+/* Fondo oscuro detrás del modal en marrón */
+.modal-backdrop {
+    --bs-backdrop-bg: #3B2A20;
+}
+
+/* ---------- Estados interactivos ---------- */
+/* Links del navbar */
+.menu-enlace {
+    transition: color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.menu-enlace:hover {
+    color: #3B2A20;
+    background-color: #F2C14E;
+}
+
+.menu-enlace:focus {
+    color: #3B2A20;
+    background-color: #F2C14E;
+    box-shadow: 0 0 0 3px #A8431F;
+}
+
+.menu-enlace:active {
+    color: #FFF4E3;
+    background-color: #A8431F;
+}
+
+/* Botones */
+.boton {
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.1s ease;
+}
+
+.boton:hover {
+    background-color: #3B2A20;
+    color: #F2C14E;
+}
+
+.boton:focus {
+    background-color: #3B2A20;
+    color: #F2C14E;
+    outline: 3px solid #A8431F;
+    outline-offset: 2px;
+}
+
+.boton:active {
+    background-color: #F2C14E;
+    color: #3B2A20;
+    transform: scale(0.96);
+}
+
+.boton-menu {
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.boton-menu:hover {
+    background-color: #A8431F;
+}
+
+.boton-menu:focus {
+    box-shadow: 0 0 0 3px #A8431F;
+}
+
+.boton-menu:active {
+    background-color: #F2C14E;
+}
+
+.boton-menu:active .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%233B2A20' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Tarjetas */
+.tarjeta {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta:hover,
+.tarjeta:focus-within {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(59, 42, 32, 0.15);
+}
+
+.tarjeta:active {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(59, 42, 32, 0.2);
+}
+
+/* Controles del carousel */
+.carrusel-control {
+    transition: opacity 0.2s ease;
+}
+
+.carrusel-icono {
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.carrusel-control:hover,
+.carrusel-control:focus {
+    opacity: 1;
+}
+
+.carrusel-control:hover .carrusel-icono,
+.carrusel-control:focus .carrusel-icono {
+    background-color: #3B2A20;
+}
+
+.carrusel-control:active .carrusel-icono {
+    background-color: #F2C14E;
+    transform: scale(0.9);
+}
+
 /* ---------- Grilla de tarjetas ---------- */
 .destacados {
     display: grid;
@@ -255,6 +435,25 @@
 
 .tarjeta-higiene {
     grid-area: higiene;
+}
+
+/* ---------- Media query: tablet ---------- */
+@media (min-width: 768px) {
+    .destacados {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "titulo titulo"
+            "cachorros camas"
+            "collares collares";
+    }
+
+    .categorias {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "titulo titulo"
+            "alimentos accesorios"
+            "juguetes higiene";
+    }
 }
 
 /* ---------- Media query: pantallas grandes ---------- */
